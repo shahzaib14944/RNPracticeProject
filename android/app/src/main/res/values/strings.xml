@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FirebaseNotifications</string>
+    <string name="facebook_app_id">2931657937126627</string>
+	<color name="blue">#4F6D7A</color>
+</resources>

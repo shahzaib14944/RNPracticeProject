@@ -1,6 +1,7 @@
 import React, {useEffect, useState, useRef} from 'react';
 import {Text, View, Alert, ScrollView, Animated} from 'react-native';
 import messaging from '@react-native-firebase/messaging';
+import { Profile } from "react-native-fbsdk-next";
 
 const HomeScreen = () => {
   const [headerShown, setHeaderShown] = useState(false);
@@ -17,6 +18,15 @@ const HomeScreen = () => {
     });
     return unsubscribe;
   }, []);
+
+  const currentProfile = Profile.getCurrentProfile().then(
+    function(currentProfile) {
+      if (currentProfile) {
+        console.log(currentProfile, "currentProfile");
+      }
+    }
+  );
+
   return (
     <View style = {{backgroundColor: 'lightgray'}}>
       <View

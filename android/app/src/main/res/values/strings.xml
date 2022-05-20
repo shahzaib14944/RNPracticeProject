@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">FirebaseNotifications</string>
     <string name="facebook_app_id">2931657937126627</string>
+    <string name="facebook_client_token">2b19439878492afb8ef12c24c99bb19f</string>
 	<color name="blue">#4F6D7A</color>
 </resources>

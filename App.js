@@ -6,11 +6,8 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       SplashScreen.hide();
-    }, 2000)
-    })
-  return (
-    <Navigation />
-  )
-
-}
+    }, 2000);
+  });
+  return <Navigation />;
+};
 export default App;

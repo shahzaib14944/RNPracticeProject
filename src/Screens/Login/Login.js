@@ -22,7 +22,7 @@ const LoginScreen = ({navigation}) => {
       id: 2,
       name: 'logo-google',
       size: 50,
-      color: 'black',
+      color: 'darkorange',
       onPress: () => googleLogin,
     },
     {

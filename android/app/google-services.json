@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "628914717056",
-    "project_id": "rnnotifications-383b7",
-    "storage_bucket": "rnnotifications-383b7.appspot.com"
+    "project_number": "2005214080",
+    "project_id": "rnnotifications-e0d57",
+    "storage_bucket": "rnnotifications-e0d57.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:628914717056:android:0ccf73bd5911d57e0d0165",
+        "mobilesdk_app_id": "1:2005214080:android:b35434db6bda7e4c569765",
         "android_client_info": {
           "package_name": "com.firebasenotifications"
         }
       },
       "oauth_client": [
         {
-          "client_id": "628914717056-7vv1kairh7h1u48dcb8n8usc5bc8p530.apps.googleusercontent.com",
+          "client_id": "2005214080-vh4ico1cj170dpu66vui7rvqukv1mh10.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.firebasenotifications",
+            "certificate_hash": "6738bfb1c0ddeb4cd14cceab1cb228632be41134"
+          }
+        },
+        {
+          "client_id": "2005214080-ttartoi434fm4ckdq623k1e6sdtcncbn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD-zrszDd1QidEAIhSUAyLirN1FlyrwdGU"
+          "current_key": "AIzaSyCP_Jy2vMMV2unyUYcExNqswKyfm_rrygg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "628914717056-7vv1kairh7h1u48dcb8n8usc5bc8p530.apps.googleusercontent.com",
+              "client_id": "2005214080-ttartoi434fm4ckdq623k1e6sdtcncbn.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

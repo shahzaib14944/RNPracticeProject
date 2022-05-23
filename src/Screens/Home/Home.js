@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useRef} from 'react';
 import {Text, View, Alert, ScrollView, Animated} from 'react-native';
 import messaging from '@react-native-firebase/messaging';
-import { Profile } from "react-native-fbsdk-next";
+import {Profile} from 'react-native-fbsdk-next';
 
 const HomeScreen = () => {
   const [headerShown, setHeaderShown] = useState(false);
@@ -13,22 +13,23 @@ const HomeScreen = () => {
   });
 
   useEffect(() => {
+    getUserProfile();
     const unsubscribe = messaging().onMessage(async remoteMessage => {
       Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
     });
     return unsubscribe;
   }, []);
 
-  const currentProfile = Profile.getCurrentProfile().then(
-    function(currentProfile) {
+  function getUserProfile() {
+    Profile.getCurrentProfile().then(function (currentProfile) {
       if (currentProfile) {
-        console.log(currentProfile, "currentProfile");
+        console.log(currentProfile, 'currentProfile');
       }
-    }
-  );
+    });
+  }
 
   return (
-    <View style = {{backgroundColor: 'lightgray'}}>
+    <View style={{backgroundColor: 'lightgray'}}>
       <View
         style={{
           backgroundColor: 'blue',
@@ -37,7 +38,7 @@ const HomeScreen = () => {
           zIndex: 99,
         }}></View>
       <Animated.View style={{backgroundColor: 'lightgray'}}>
-          <Animated.View
+        <Animated.View
           style={{
             backgroundColor: 'green',
             width: '100%',
@@ -45,7 +46,6 @@ const HomeScreen = () => {
             transform: [{translateY: translation}],
             color: 'lightgray',
           }}></Animated.View>
-
       </Animated.View>
 
       <Animated.ScrollView

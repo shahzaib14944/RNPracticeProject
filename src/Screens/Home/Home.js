@@ -1,7 +1,15 @@
 import React, {useEffect, useState, useRef} from 'react';
-import {Text, View, Alert, ScrollView, Animated} from 'react-native';
+import {
+  Text,
+  View,
+  Alert,
+  ScrollView,
+  Animated,
+  StyleSheet,
+} from 'react-native';
 import messaging from '@react-native-firebase/messaging';
 import {Profile} from 'react-native-fbsdk-next';
+import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 
 const HomeScreen = () => {
   const [headerShown, setHeaderShown] = useState(false);
@@ -74,12 +82,17 @@ const HomeScreen = () => {
               alignItems: 'center',
             }}>
             <View
-              style={{
-                width: 250,
-                height: 250,
-                backgroundColor: 'black',
-                marginTop: 20,
-              }}></View>
+              style={styles.mapContainer}>
+              <MapView
+                provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+                style={styles.map}
+                region={{
+                  latitude: 37.78825,
+                  longitude: -122.4324,
+                  latitudeDelta: 0.015,
+                  longitudeDelta: 0.0121,
+                }}></MapView>
+            </View>
           </View>
           <View
             style={{
@@ -92,5 +105,17 @@ const HomeScreen = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  map: {
+    ...StyleSheet.absoluteFillObject,
+  },
+  mapContainer: {
+      width: '100%',
+      height: 400,
+      marginTop: 20,
+      ...StyleSheet.absoluteFillObject
+  }
+})
 
 export default HomeScreen;
